@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "usage: gcl [repo]"
+    exit 1
+fi
+
+git clone https://github.com/aaraza/$1.git 
