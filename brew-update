@@ -1,7 +1,8 @@
 #!/bin/bash 
-
 brew update
+brew outdated
 brew upgrade
+brew doctor
 brew cleanup
 brew cask outdated | xargs brew cask reinstall
 brew cask cleanup
