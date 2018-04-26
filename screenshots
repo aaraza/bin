@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Command to set default screenshot location
+# @author Ali Raza
+
+if [ -z "$1" ]; then
+  echo "usage: screenshots [path]"
+  exit 1
+fi
+
+defaults write com.apple.screencapture location $1
