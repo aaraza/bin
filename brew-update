@@ -1,9 +1,16 @@
-#!/bin/bash 
+#!/usr/bin/env bash
+#
+# Homebrew maintainence script responsible
+# for keeping package manager and package
+# up to date and perform regular cleanup
+
 brew update
 brew outdated
 brew upgrade
 brew doctor
 brew cleanup
-brew cask upgrade --greedy
-brew cask cleanup
 brew prune
+
+if [ "$1" = "--cask" ]; then
+ brew cu --cleanup -a -f -y 
+fi
