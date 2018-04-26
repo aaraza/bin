@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#
+# Open vim with NERDTree and tagbar
+# emulating IDE project explorer and
+# outline functionality
+#
+# @author Ali Raza
+# @github aaraza
+
+if [ -z "$1" ]; then
+  echo "usage: ide-vim [file]"
+  exit 1
+fi
+
+vim $1 +NERDTree +TagbarToggle
