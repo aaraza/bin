@@ -9,7 +9,6 @@ brew outdated
 brew upgrade
 brew doctor
 brew cleanup
-brew prune
 
 if [ "$1" = "--cask" ]; then
  brew cu --cleanup -a -f -y 
