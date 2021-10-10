@@ -4,6 +4,8 @@
 # for keeping package manager and package
 # up to date and perform regular cleanup
 
+# https://apple.stackexchange.com/a/359825
+
 brew update
 brew outdated
 brew upgrade
