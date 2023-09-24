@@ -1,17 +1,8 @@
 #!/usr/bin/env bash
-#
-# Homebrew maintainence script responsible
-# for keeping package manager and package
-# up to date and perform regular cleanup
-
-# https://apple.stackexchange.com/a/359825
+# Upgrades all homebrew packages and casks
 
 brew update
 brew outdated
-brew upgrade
+brew list | xargs brew upgrade 
 brew doctor
 brew cleanup
-
-if [ "$1" = "--cask" ]; then
- brew cu --cleanup -a -f -y 
-fi
